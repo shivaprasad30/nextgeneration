@@ -6,6 +6,8 @@ h1{
     color:black;
     text-align:center;
     font-family:Algerian;
+    background-color: yellow;
+    background-origin: border-box;
 
 }
 h2{
