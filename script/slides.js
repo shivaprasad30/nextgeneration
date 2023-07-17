@@ -1,6 +1,6 @@
 var img = document.getElementById('img');
 
-var slides=['images/agri2.jpg','images/agri3.jpg','images/agri1.jpg'];
+var slides = ['images/agri2.jpg', 'images/agri3.jpg', 'images/agri4.jpg', 'images/agri1.jpg'];
 
 var Start=0;
 
