@@ -26,7 +26,7 @@ p{
 /*  START
     Slideshow container */
 .slideshow-container {
-    max-width: 800px;
+    max-width: 1000px;
     height: 500px;
     position: relative;
     margin: auto;
@@ -124,11 +124,11 @@ p{
 .contain{
     position:absolute;
     top:25%;
-    left:5%;
+    left:10%;
 }
 .conta1{
     position:absolute;
     top:25%;
     left:55%;
-    right:30%;
+    /*right:30%;*/
 }
