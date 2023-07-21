@@ -1,11 +1,61 @@
 ﻿<!DOCTYPE html>
+<style>
+    body {
+        display: inline-flex;
+        background-image: url('images/agri8.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        margin: 0;
+    }
+</style>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <title>PEST DECTECTION</title>
+    <link rel="stylesheet" href="css/pest_css.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+    <nav>
+        <div class="logo">
+            <p>THE NEXT GENERATION OF AGRICULTURE</p>
+        </div>
+        <ul>
+            <li>
+                <a href="login.html" target="_blank"> LOGIN</a>
+                <div class="dropdown">
+                    <!-- <button class="button">Options</button>
+                <div class="dropdown-content">-->
+                    <a href="profile.html" target="_blank">Profile</a>
+                    <a href="signup.html" target="_blank">Signup</a>
+                    <a href="#">Others</a>
+                    <!--  </div>
+                </div>-->
+            </li>
+        </ul>
+    </nav>
+    <div class="hi">
+        <h2> THE PEST DETECTION</h2>
+    </div>
+    <div class="frame">
+        <div class="center">
+            <div class="bar"></div>
+            <div class="title">Drop file to upload</div>
+            <div class="dropzone">
+                <div class="content">
+                    <img src="images/upload.png" width="40" height="30" class="upload">
+                    <span class="filename"></span>
+                    <input type="file" class="input">
+                </div>
+            </div>
+            <img src="images/sync.jpg" class="syncing">
+            <img src="images/check.png" class="done">
+            <div class="upload-btn">Upload file</div>
+        </div>
+    </div>
+    <script type="text/javascript" src="script/slides.js" .></script>
 
 </body>
 </html>

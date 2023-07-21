@@ -1,18 +1,24 @@
-﻿body
-{
-    background-color:aqua;
+﻿body {
+    background-color: aqua;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 500px;
 }
-h1{
-    color:black;
-    text-align:center;
-    font-family:Algerian;
-    background-color: yellow;
-    background-origin: border-box;
 
+h1{
+    color: black;
+    text-align: center;
+    font-family: Algerian;
+    /*background-color: yellow;
+    background-origin: border-box;
+    position:absolute;*/
+    
 }
 h2{
     color:darkblue;
     text-align:center;
+    position:absolute;
+    top:10%;
+    left:40%
 
 }
 p{
@@ -20,17 +26,57 @@ p{
     text-align: center;
 }
 * {
-    box-sizing: border-box
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
 }
+nav{
+    width:100%;
+    height:75px;
+    line-height:75px;
+    padding:0px 100px;
+    position:fixed;
+    background-image:linear-gradient(#033747,#012733);
+}
+nav .logo p{
+    font-size:30px;
+    font-weight:bold;
+    float:left;
+    color:white;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    cursor:pointer;
+}
+nav ul{
+    float:right;
+}
+nav li{
+    display:inline-block;
+    list-style:none;
+}
+nav li a{
+    font-size:15px;
+    text-transform:uppercase;
+    padding:0px 30px;
+    color:white;
+    text-decoration:none;
 
+}
+nav li a:hover{
+    color:#ff8c69;
+    transition:all  0.4s 0s;
+
+}
 /*  START
     Slideshow container */
 .slideshow-container {
     max-width: 1000px;
     height: 500px;
-    position: relative;
+    position: fixed;
     margin: auto;
     float: left;
+    white-space: nowrap;
+    top:25%;
 }
 .imgstyle{
     height: 500px;
@@ -110,6 +156,7 @@ p{
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
+    white-space:nowrap;
 }
 
 @keyframes fade {
@@ -132,11 +179,7 @@ p{
     left:55%;
     /*right:30%;*/
 }
-.op{
-    position:absolute;
-    top:3%;
-    left:87%;
-}
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -191,3 +234,15 @@ a:link, a:visited {
 a:hover, a:active {
     background-color: red;
 }*/
+.sidebar {
+    display: flex;
+    height: 710px;
+    width: 30%;
+    flex-flow: column wrap;
+    align-content: center;
+    font-family: 'OpenSans, OpenSans-Regular';
+    background-image: url("images/agri5.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
