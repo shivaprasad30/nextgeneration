@@ -1,18 +1,19 @@
 ﻿body {
-    background-color: aqua;
+    background-color:white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     min-height: 500px;
 }
 
-h1{
+/*h1{
     color: black;
     text-align: center;
     font-family: Algerian;
     /*background-color: yellow;
     background-origin: border-box;
-    position:absolute;*/
+    position:absolute;
     
-}
+}*/
+
 h2{
     color:darkblue;
     text-align:center;
