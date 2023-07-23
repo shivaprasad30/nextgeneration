@@ -72,11 +72,11 @@ nav li a:hover{
 .slideshow-container {
     max-width: 1000px;
     height: 500px;
-    position: fixed;
+    position: absolute;
     margin: auto;
     float: left;
     white-space: nowrap;
-    top:25%;
+    top:250px;
 }
 .imgstyle{
     height: 500px;
