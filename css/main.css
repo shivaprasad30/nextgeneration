@@ -1,5 +1,5 @@
 ﻿body {
-    background-color:white;
+    background-color: darkgrey;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     min-height: 500px;
 }
@@ -18,8 +18,8 @@ h2{
     color:darkblue;
     text-align:center;
     position:absolute;
-    top:10%;
-    left:40%
+    top:15%;
+    left:45%
 
 }
 p{
