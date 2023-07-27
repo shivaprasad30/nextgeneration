@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html  lang="en"> 
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"  content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       
+        body{
+            font-family:"Roboto condesed", sans-serif;
+            background-color: darkcyan;
+            padding: 40px 550px;
+        }
+
+        h1,
+        h3{
+            font-family: Arial;
+        }
+
+        .container {
+            margin:150px auto;
+            font-size: 18px;
+            color:white;
+        }
+        .container input {
+            margin-top:4px;
+            height: 50px;
+            width: 100%;
+            outline: none;
+            border: none;
+            padding: 0 20px 0 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>The Next Generation Agriculture</h1>
+        <label for =" your suggestions"></label>
+    </div>    
+    <form>
+        <fieldset>
+            <div>
+                <label>Suggestion-box</label>
+            </div>
+            
+            <div>
+                <input list="the next genrationof agriculture" type="text" placeholder="Enter here" /> 
+                <datalist title=" trends in agriculture">
+                    <option value="agriculture drone technology">agriculture drone technology</option>
+                    <option value="Diversification of agriculture">Diversification of agriculture</option>
+                    <option value="Areial imaging">Areial imaging</option>
+                    <option value="Hydroponics and vertical farming">Hydroponics and vertical farming</option>
+                    <option value="Iot in agriculture">Iot in agriculture</option>
+                </datalist>
+            </div>
+        </fieldset>
+    </form>        
+</body>
+</html>
