@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Seed Selling Web Page</title>
+  <link rel="stylesheet" type="text/css" href="hii.css">
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="seeds1.jpg">
+    </div>
+    <div class="search">
+      <input type="text" placeholder="Search for seeds" id="seedInput">
+      <button onclick="searchSeeds()">Search</button>
+    </div>
+    <!--div class="menu">
+      <a href="#">Home</a>
+      <a href="#">Seeds</a>
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+    </div-->
+    <div class="content">
+      <h2>Welcome to Seed Selling Web Page</h2>
+      <p>Seed Selling Web Page is a platform where users can get access to different seeds when they search about it. Here, users can view all the available seeds and their details. They can also place an order for their desired seeds. We are providing the best quality seeds to our users. We are dedicated to providing the best service to our users, and we are always ready to serve them.</p>
+
+      <h3>Seeds</h3>
+      <ul id="seedList">
+        <!-- Seeds will be displayed here dynamically -->
+      </ul>
+
+      <h3>Related Pesticides</h3>
+      <ul id="pesticideList">
+        <!-- Pesticides will be displayed here dynamically -->
+      </ul>
+
+      <h3>Suggestions</h3>
+      <ul id="suggestionsList">
+        <!-- Suggestions will be displayed here dynamically -->
+      </ul>
+    </div>
+    <div class="footer">
+      <!p>&copy; 2021 Seed Selling Web Page. All rights reserved.</p>
+    </div>
+  </div>
+  <script>
+    const seedsData = [
+      {
+        name: 'Nigerian Rice Seeds',
+        description: 'Nigerian Rice Seeds are known for their high yields and low cost. They are widely used in agriculture and are considered to be the most reliable and environmentally friendly seeds.',
+        crop: 'rice',
+        pesticides: ['Dinotefuran', 'Pymetrozine', 'GreenLeaf Hopper(GLH)'],
+        suggestions: ['Proper irrigation is crucial for rice cultivation.', 'Choose suitable rice variety based on soil type.'],
+      },
+      {
+        name: 'Sunflower Seeds',
+        description: 'Sunflower seeds are widely used in agriculture and are considered to be the most reliable and environmentally friendly seeds.',
+        crop: 'sunflower',
+        pesticides: ['Herbicides', 'Neem oil', 'Sandovit (or) Teepal'],
+        suggestions: ['Plant sunflowers in full sun for better growth.', 'Harvest sunflower seeds after they turn brown.'],
+      },
+      {
+        name: 'Wheat Seeds',
+        description: 'Wheat seeds are widely used in agriculture and are considered to be the most reliable and environmentally friendly seeds.',
+        crop: 'wheat',
+        pesticides: ['Organochlorines', 'Organophosphates', 'Synthetic Pythroids'],
+        suggestions: ['Wheat requires well-drained soil.', 'Fertilize wheat at the right growth stages.'],
+      },
+      {
+      name: 'Carrot',
+      description: 'Carrots are a popular root vegetable known for their bright color and nutritional benefits.',
+      crop: 'carrot',
+      pesticides: ['Diazinon','Pendimethalin','Metalaxyl/Mefenoxam'],
+      suggestions: ['Sow carrot seeds in loose, well-prepared soil.', 'Thin out carrot seedlings for proper spacing.'],
+      },
+      {
+      name: 'Corn Seeds',
+      description: 'Corn seeds are a staple crop known for their versatility and nutritional value.',
+      crop: 'corn',
+      pesticides: ['LAMBDA-CYHALOTHRIN ','Glyphosate','Emamectin Benzoate'],
+      suggestions: ['Plant corn in blocks for proper pollination.', 'Harvest corn when the kernels are fully developed.'],
+      },
+     
+      // Add more seed data here
+    ];
+
+    function displaySeeds(seeds) {
+      const seedList = document.getElementById('seedList');
+      seedList.innerHTML = '';
+
+      seeds.forEach(seed => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `
+          <h4>${seed.name}</h4>
+          <p>${seed.description}</p>
+          <a href="#">Buy Now</a>
+        `;
+        seedList.appendChild(listItem);
+      });
+    }
+
+    function displayPesticides(pesticides) {
+      const pesticideList = document.getElementById('pesticideList');
+      pesticideList.innerHTML = '';
+
+      pesticides.forEach(pesticide => {
+        const listItem = document.createElement('li');
+        listItem.textContent = pesticide;
+        pesticideList.appendChild(listItem);
+      });
+    }
+
+    function displaySuggestions(suggestions) {
+      const suggestionsList = document.getElementById('suggestionsList');
+      suggestionsList.innerHTML = '';
+
+      suggestions.forEach(suggestion => {
+        const listItem = document.createElement('li');
+        listItem.textContent = suggestion;
+        suggestionsList.appendChild(listItem);
+      });
+    }
+
+    function searchSeeds() {
+      const searchTerm = document.getElementById('seedInput').value.trim().toLowerCase();
+      const matchedSeeds = seedsData.filter(seed => seed.crop.toLowerCase() === searchTerm);
+
+      if (matchedSeeds.length > 0) {
+        displaySeeds(matchedSeeds);
+        displayPesticides(matchedSeeds[0].pesticides);
+        displaySuggestions(matchedSeeds[0].suggestions);
+      } else {
+        const seedList = document.getElementById('seedList');
+        const pesticideList = document.getElementById('pesticideList');
+        const suggestionsList = document.getElementById('suggestionsList');
+        seedList.innerHTML = '';
+        pesticideList.innerHTML = '';
+        suggestionsList.innerHTML = '';
+      }
+    }
+
+    // Initial display of all seeds
+   //displaySeeds(seedsData);
+  </script>
+</body>
+</html>
