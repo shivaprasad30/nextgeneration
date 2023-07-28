@@ -20,6 +20,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+.lin{
+    position:center;
+}
 .hi{
     left:50%;
     color:#fff;
