@@ -1,11 +1,100 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>PROFILE</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile Settings</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+      <div class="col-md-3 border-right">
+        <div class="d-flex flex-column align-items-center text-center p-4 py-5">
+          <!-- Profile Photo Upload -->
+          <label for="profile-photo" class="profile-photo-label">
+            <img id="profile-img" class="rounded-circle mt-4" src="images/agri10.jpg" alt="Profile Photo">
+            <span class="change-photo-text">(Click to change photo)</span>
+          </label>
+          <input type="file" id="profile-photo" class="d-none" accept="image/*" onchange="previewProfilePhoto(event)">
+          <!-- Profile Information -->
+          <span class="font-weight-bold mt-3">Team Octal</span>
+          <span class="text-black-50">teamoctal.com</span>
+        </div>
+      </div>
+      <div class="col-md-5 border-right">
+        <div class="p-4 py-5">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4 class="text-right">Profile Settings</h4>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-6">
+              <label class="labels">Name</label>
+              <input type="text" class="form-control" placeholder="First Name" value="">
+            </div>
+            <div class="col-md-6">
+              <label class="labels">Surname</label>
+              <input type="text" class="form-control" placeholder="Surname" value="">
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-md-12">
+              <label class="labels">Phone Number</label>
+              <input type="text" class="form-control" placeholder="Enter Phone Number" value="">
+            </div>
+            <div class="col-md-12">
+              <label class="labels">Address</label>
+              <input type="text" class="form-control" placeholder="Enter Address" value="">
+            </div>
+            <div class="col-md-12">
+              <label class="labels">Email ID</label>
+              <input type="text" class="form-control" placeholder="Enter Email ID" value="">
+            </div>
+            
+          </div>
+          <div class="row mt-4">
+            <div class="col-md-6">
+              <label class="labels">Country</label>
+              <input type="text" class="form-control" placeholder="Country" value="">
+            </div>
+            <div class="col-md-6">
+              <label class="labels">State/Region</label>
+              <input type="text" class="form-control" placeholder="State" value="">
+            </div>
+          </div>
+          <div class="mt-5 text-center">
+            <button class="btn btn-primary profile-button" type="button">Save Profile</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 py-5">
+          <div class="d-flex justify-content-between align-items-center experience">
+            
+          <div class="col-md-12">
+            <label class="labels">Additional Details</label>
+            <input type="text" class="form-control" placeholder="Additional Details" value="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <script>
+    // Function to preview the selected profile photo
+    function previewProfilePhoto(event) {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+
+      reader.onload = function () {
+        const profileImg = document.getElementById("profile-img");
+        profileImg.src = reader.result;
+      }
+
+      if (file) {
+        reader.readAsDataURL(file);
+      }
+    }
+  </script>
 </body>
 </html>

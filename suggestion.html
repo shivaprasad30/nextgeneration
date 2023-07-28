@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport"  content="width=device-width, initial-scale=1.0" />
-
+    <link rel="stylesheet" href="css/main.css" />
     <style>
         *{
             margin: 0;
@@ -15,7 +15,7 @@
         body{
             font-family:"Roboto condesed", sans-serif;
             background-color: darkcyan;
-            padding: 40px 550px;
+            
         }
 
         h1,
@@ -24,9 +24,10 @@
         }
 
         .container {
-            margin:150px auto;
+            margin: 150px auto;
             font-size: 18px;
-            color:white;
+            color: white;
+            top: 150px;
         }
         .container input {
             margin-top:4px;
@@ -41,18 +42,39 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>The Next Generation Agriculture</h1>
-        <label for =" your suggestions"></label>
-    </div>    
+    <nav>
+        <div class="logo">
+            <p>THE NEXT GENERATION OF AGRICULTURE</p>
+        </div>
+        <ul>
+            <li>
+                <a href="login.html" target="_blank"> LOGIN</a>
+                <a href="profile.html" target="_blank">Profile</a>
+                <a href="signup.html" target="_blank">Signup</a>
+                <a href="about.html" target="_blank">About</a>
+                <div class="dropdown">
+                    <button class="button">services</button>
+                    <div class="dropdown-content">
+                        <a href="pest.html" target="_blank">Detection</a>
+                        <a href="weather.html" target="_blank">Weather Reporting</a>
+                        <a href="agriculture_market.html" target="_blank">Markecting</a>
+                        <a href="suggestion.html" target="_blank">Suggestions_for_farmer</a>
+                        <a href="scaricity.html" target="_blank">Scaricity of capital and unavilable of machinery</a>
+                    </div>
+                </div>
+            </li>
+
+
+        </ul>
+    </nav>
     <form>
         <fieldset>
             <div>
                 <label>Suggestion-box</label>
             </div>
-            
-            <div>
-                <input list="the next genrationof agriculture" type="text" placeholder="Enter here" /> 
+
+            <div class="container">
+                <input list="trends in agriculture" type="text" placeholder="Enter here" />
                 <datalist title=" trends in agriculture">
                     <option value="agriculture drone technology">agriculture drone technology</option>
                     <option value="Diversification of agriculture">Diversification of agriculture</option>
@@ -62,6 +84,6 @@
                 </datalist>
             </div>
         </fieldset>
-    </form>        
+    </form>
 </body>
 </html>
