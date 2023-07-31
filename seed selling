@@ -139,7 +139,7 @@
     }
 
     // Initial display of all seeds
-  //displaySeeds(seedsData);
+  displaySeeds(seedsData);
   </script>
 </body>
 </html>
