@@ -61,7 +61,7 @@
 .content {
     margin-top: 50px;
     text-align: center;
-    background-image: url('images.jpg');
+    background-image: url('images/seed2.jpg');
     background-size: cover;
     background-position: center;
     padding: 20px;
@@ -121,7 +121,50 @@
     margin-top: 50px;
     text-align: center;
 }
-
-    .footer p {
-        margin-bottom: 0;
+  
+  .footer p {
+    margin-bottom: 0;
+  }
+  
+  /* Media queries for responsiveness */
+  
+  /* For bigger screens */
+  @media (min-width: 768px) {
+    .search input {
+      width: 30%;
     }
+  }
+  
+  /* For smaller screens and mobiles */
+  @media (max-width: 767px) {
+    .logo {
+      margin-top: 30px;
+    }
+  
+    .search {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .search input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .menu {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .content h2 {
+      font-size: 24px;
+    }
+  
+    .content p {
+      font-size: 16px;
+    }
+  
+    .content h3 {
+      font-size: 18px;
+    }
+  }
