@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Digital Market</title>
+  <link rel="stylesheet" href="market1.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the Digital Market</h1>
+    <label for="cropSearch">Enter Crop Name:</label>
+    <input type="text" id="cropSearch" />
+    <button onclick="searchCrops()">Search</button>
+
+    <div id="results"></div>
+  </div>
+
+  <script>
+     const crops = [
+  { name: 'Wheat', location: 'Adilabad' },
+  { name: 'Rice', location: 'Kamareddy' },
+  { name: 'Pulses', location: 'Kamareddy' },
+  { name: 'Sorgham', location: 'Adilabad' },
+  { name: 'Potato', location: 'Medak' },
+  { name: 'Leafy Vegtables', location: 'Medak and Nalgonda' },
+  { name: 'Banana', location: 'Mahabubnagar' },
+  { name: 'Onion', location: 'Mahabubnagar' },
+  { name: 'Cotton', location: 'Nalgonda' },
+  { name: 'Tomato', location: 'Dhanora in Kerameri area of K.M. Asifabad district, earlier a part of Adilabad district bordering ' },
+];
+
+function searchCrops() {
+  const searchInput = document.getElementById('cropSearch').value;
+  const resultsDiv = document.getElementById('results');
+  resultsDiv.innerHTML = '';
+
+  const filteredCrops = crops.filter((crop) =>
+    crop.name.toLowerCase().includes(searchInput.toLowerCase())
+  );
+
+  if (filteredCrops.length === 0) {
+    resultsDiv.innerHTML = '<p>No crops found. Try another search term.</p>';
+  } else {
+    const ul = document.createElement('ul');
+    filteredCrops.forEach((crop) => {
+      const li = document.createElement('li');
+      li.textContent = `${crop.name} - Available at ${crop.location}`;
+      ul.appendChild(li);
+    });
+    resultsDiv.appendChild(ul);
+  }
+}
+</script>
+</body>
+</html>
