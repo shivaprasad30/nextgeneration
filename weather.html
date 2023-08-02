@@ -7,31 +7,44 @@
     <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <p>THE NEXT GENERATION OF AGRICULTURE</p>
+    
+  <nav>
+    <div class="logo">
+      <p>THE NEXT GENERATION OF AGRICULTURE</p>
+    </div>
+    <ul>
+      <li>
+        <a class="nav-link" href="thenextgenerationofagriculture.html" target="_parent">Home</a>
+        <a href="login.html" target="_blank">LOGIN</a>
+        <a href="profile.html" target="_blank">Profile</a>
+        <a href="signup.html" target="_blank">Signup</a>
+        <div class="dropdown">
+          <button class="button">Services</button>
+          <div class="dropdown-content">
+            <a href="pest.html" target="_blank">Detection</a>
+            <a href="weather.html" target="_blank">Weather Reporting</a>
+            <a href="agriculture_market.html" target="_blank">Marketing</a>
+            <a href="suggestion.html" target="_blank">Suggestions for Farmer</a>
+            <a href="scaricity.html" target="_blank">Scarcity of Capital and Unavailability of Machinery</a>
+          </div>
         </div>
-        <ul>
-            <li>
-                <a class="nav-link" href="thenextgenerationofagriculture.html" target="_parent">Home</a>
-                <a href="login.html" target="_blank"> LOGIN</a>
-                <a href="profile.html" target="_blank">Profile</a>
-                <a href="signup.html" target="_blank">Signup</a>
-                <div class="dropdown">
-                    <button class="button">services</button>
-                    <div class="dropdown-content">
-                        <a href="pest.html" target="_blank">Detection</a>
-                        <a href="weather.html" target="_blank">Weather Reporting</a>
-                        <a href="agriculture_market.html" target="_blank">Markecting</a>
-                        <a href="suggestion.html" target="_blank">Suggestions_for_farmer</a>
-                        <a href="scaricity.html" target="_blank">Scaricity of capital and unavilable of machinery</a>
-                    </div>
-                </div>
-            </li>
+      </li>
+    </ul>
+  </nav>
 
+  <div class="container">
+    <h1>Weather Reporting</h1>
+    <div class="weather-info">
+      <input type="text" id="cityInput" placeholder="Enter city name">
+      <button onclick="getWeather()">Get Weather</button>
+      <div id="weatherData"></div>
+    </div>
+  </div>
 
-        </ul>
-    </nav>
+  <script src="js/weather.js"></script> <!-- Add a new JavaScript file for weather-specific functionality -->
+</body>
+</html>
+
 
 </body>
 </html>
